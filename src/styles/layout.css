@@ -123,6 +123,12 @@
     }
 }
 
+.page-container {
+    padding: 2rem 4rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
 /* Footer (Global) */
 .main-footer {
     border-top: 1px solid var(--glass-border);
@@ -170,5 +176,9 @@
         height: 3px;
         top: auto;
         bottom: 0;
+    }
+
+    .page-container {
+        padding: 1.5rem 1rem;
     }
 }

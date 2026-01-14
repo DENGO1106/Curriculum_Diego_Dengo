@@ -11,19 +11,20 @@ const Dashboard = () => {
     ]
 
     return (
-        <div style={{ padding: '2rem 4rem' }}>
+        <div className="page-container">
             {/* Header Dinámico */}
             <header className="animate-fade-in-up" style={{
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'space-between',
+                justifyContent: 'center',
+                textAlign: 'center',
                 marginBottom: '4rem',
-                flexWrap: 'wrap',
+                flexDirection: 'column',
                 gap: '2rem'
             }}>
-                <div style={{ maxWidth: '800px' }}>
+                <div style={{ maxWidth: '100%' }}>
                     <h1 style={{
-                        fontSize: '2.5rem',
+                        fontSize: 'clamp(2rem, 5vw, 2.5rem)',
                         fontWeight: '800',
                         background: 'linear-gradient(to right, #fff, #94a3b8)',
                         WebkitBackgroundClip: 'text',
@@ -34,7 +35,7 @@ const Dashboard = () => {
                         Diego Alberto Dengo Soto
                     </h1>
                     <h2 style={{
-                        fontSize: '1.5rem',
+                        fontSize: 'clamp(1.1rem, 3vw, 1.5rem)',
                         color: 'var(--text-accent)',
                         marginBottom: '2rem',
                         fontWeight: '600'
@@ -42,7 +43,7 @@ const Dashboard = () => {
                         Futuro Ingeniero Industrial & Contador Público
                     </h2>
 
-                    <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                    <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
                         <a href="/cv_diego_dengo.pdf" download="CV_Diego_Dengo.pdf" className="btn btn-primary">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
                             Descargar CV
@@ -57,12 +58,13 @@ const Dashboard = () => {
                 </div>
 
                 <div style={{
-                    width: '250px',
-                    height: '250px',
+                    width: 'clamp(180px, 40vw, 250px)',
+                    height: 'clamp(180px, 40vw, 250px)',
                     borderRadius: '50%',
                     overflow: 'hidden',
                     border: '4px solid var(--text-accent)',
-                    boxShadow: '0 0 30px rgba(59, 130, 246, 0.3)'
+                    boxShadow: '0 0 30px rgba(59, 130, 246, 0.3)',
+                    flexShrink: 0
                 }}>
                     <img src="/profile-photo.jpg" alt="Diego Dengo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </div>
